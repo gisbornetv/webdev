@@ -1,0 +1,136 @@
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+font-size: 15px;
+line-height: 1.5;
+background: #f4f4f4;
+
+}
+/*Footer Area*/
+footer {
+	height: 10vh;
+	background-color: #DAF7A6;
+	text-align: center;
+	
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.CurtainMenu {
+	background-color: #DAF7A6;
+	min-height: 5vh;
+	
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;/*display on a row => horizontally*/
+}
+
+.logo-tagline {
+	/*Use Flexbox to create responsive layout*/
+	flex: 1;
+	
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;/*display on a row => horizontally*/
+}
+
+.logo, .tagline {
+	font-size: 1.5em;
+}
+
+.tagline{
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+/*Curtain Navigation bar*/
+nav {
+	padding: 10px 10px 10px 10px;/*10px 10px 10px 10px*/
+	overflow: visible;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+.active {
+	background-color: #FF9633;
+}
+
+nav ul li:hover:not(.active) {
+	background-color: green;
+}
+
+
+nav ul li ul li {
+	background: #555; 
+	display: block; 
+	font-size: 1em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+.desktop-menu {
+	/*Use Flexbox to create responsive layout*/
+	flex: 3;
+	display: none;	
+}
+
+
+.menu-icon-style {
+	/*Use Flexbox to create responsive layout*/
+	flex: 1;
+		
+	font-size: 4.0em;
+	color: blue;
+	cursor: pointer;
+	text-align: right;
+	margin-right: 20px;
+}
+#curtain-nav {
+	height: 70%;/*100%*/
+	width: 0;/*Hide it as default when loading page*/
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
